@@ -1,0 +1,15 @@
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\bin\Debug\net10.0\FundamentosCSharp.exe
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\bin\Debug\net10.0\FundamentosCSharp.deps.json
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\bin\Debug\net10.0\FundamentosCSharp.runtimeconfig.json
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\bin\Debug\net10.0\FundamentosCSharp.dll
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\bin\Debug\net10.0\FundamentosCSharp.pdb
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.AssemblyInfoInputs.cache
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.AssemblyInfo.cs
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.csproj.CoreCompileInputs.cache
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.sourcelink.json
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.dll
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\refint\FundamentosCSharp.dll
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.pdb
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\FundamentosCSharp.genruntimeconfig.cache
+C:\Users\42144763879\Desktop\backEnd\Exercicio03Emprestimo\obj\Debug\net10.0\ref\FundamentosCSharp.dll
