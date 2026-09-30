@@ -6,12 +6,12 @@ Console.WriteLine("Digite seu nome");
 string cliente = Console.ReadLine() ?? "";
 
 Console.WriteLine("Digite o valor total");
-double total = double.Parse(Console.ReadLine());
+double total = double.Parse(Console.ReadLine() ?? "false");
 
 while (total < 0)
 {
     Console.WriteLine("Digite um valor positivo");
-    total = double.Parse(Console.ReadLine());
+    total = double.Parse(Console.ReadLine() ?? "false");
 }
 
 Console.WriteLine("Tem fidelidade?");
@@ -44,4 +44,3 @@ Console.WriteLine($"Cliente: {cliente}");
 Console.WriteLine($"Compra: R$ {total}");
 Console.WriteLine($"Desconto: R$ {valorDesconto}");
 Console.WriteLine($"Valor Final: R$ {liquido}");
-
