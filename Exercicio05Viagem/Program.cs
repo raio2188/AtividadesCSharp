@@ -82,5 +82,5 @@ if (cartaoDesconto && valorFinal > 0)
 
 Console.WriteLine();
 Console.WriteLine($"Passageiro: {nome}");
-Console.WriteLine($"Valor base: R$ {valorBase:F2}");
-Console.WriteLine($"Valor final: R$ {valorFinal:F2}");
+Console.WriteLine($"Valor base: R$ {valorBase}");
+Console.WriteLine($"Valor final: R$ {valorFinal}");

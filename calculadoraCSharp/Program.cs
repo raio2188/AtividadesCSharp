@@ -39,7 +39,7 @@ void calcular(int num1, int num2, char operacao)
             Console.WriteLine("Digite seu operador");
             operacao = char.Parse(Console.ReadLine() ?? "");
             break;
-      }
+       }
     }
 }
 

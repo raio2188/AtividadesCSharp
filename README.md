@@ -1,37 +1,138 @@
-# Atividade C# Console - SENAI
+# Atividades C# - SENAI
 
-Este repositório contém seis exercícios desenvolvidos em **C# Console** para prática dos fundamentos da linguagem.
+Repositório utilizado para armazenar exercícios, testes e pequenos projetos desenvolvidos durante meus estudos de **C# e .NET** no SENAI.
 
-A atividade utiliza somente os conteúdos estudados até o tópico 13, com foco em entrada de dados, conversões, operadores e estruturas condicionais.
+O conteúdo acompanha minha evolução na linguagem, começando pelos fundamentos de programação e avançando gradualmente para métodos, estruturas de repetição, validação de dados e pequenos sistemas em console.
 
-## Conteúdos utilizados
+## Conteúdos praticados
 
-- Variáveis
-- Tipos de dados
-- `Console.ReadLine()`
+Até o momento, o repositório trabalha com:
+
+- Variáveis e tipos de dados
+- Entrada e saída com `Console`
 - Conversões de dados
+- `Parse` e `TryParse`
 - Operadores aritméticos
 - Operadores relacionais
 - Operadores lógicos
-- `if`
-- `else if`
-- `else`
-- Condições combinadas
-- Condições aninhadas
+- Estruturas condicionais
+- `switch`
+- Estruturas de repetição
+- `while`
+- Métodos
+- Parâmetros
+- Validação de entrada
+- `Random`
+- Organização de lógica em funções
+- Pequenos sistemas em Console
 
-## Estrutura do projeto
+---
+
+## Estrutura do repositório
 
 ```text
-AtividadesFundamentos/
+AtividadesCSharp/
+├── FundamentosCSharp/
+├── calculadoraCSharp/
+├── RpgMenu/
 ├── Exercicio01Desconto/
 ├── Exercicio02Temperatura/
 ├── Exercicio03Emprestimo/
 ├── Exercicio04ProcessoSeletivo/
 ├── Exercicio05Viagem/
-└── Exercicio06Triagem/
+├── Exercicio06Triagem/
+└── README.md
 ```
 
 ---
+
+## Fundamentos C#
+
+Projeto utilizado durante as primeiras aulas da linguagem.
+
+Contém exemplos de:
+
+- Declaração de variáveis
+- `string`, `int`, `double` e `bool`
+- Interpolação de strings
+- Entrada com `Console.ReadLine()`
+- Conversões utilizando `TryParse`
+- Operadores aritméticos
+- Operadores relacionais
+- Operadores lógicos
+- Estruturas `if` e `else`
+
+Esse projeto funciona principalmente como um arquivo de estudo e referência dos conceitos básicos apresentados durante as aulas.
+
+---
+
+## Calculadora em C#
+
+Calculadora de terminal criada para praticar métodos, validações e estruturas de controle.
+
+O programa permite realizar:
+
+- Soma
+- Subtração
+- Multiplicação
+- Divisão
+
+Também possui tratamento para:
+
+- Entrada inválida de números
+- Operadores inválidos
+- Divisão por zero
+
+O cálculo é realizado através de um método separado que recebe os dois números e o operador escolhido.
+
+---
+
+## RPG Menu
+
+Pequeno projeto pessoal em desenvolvimento para praticar os conceitos aprendidos em C# de uma forma mais interativa.
+
+Atualmente o personagem possui:
+
+- Nome
+- HP
+- MP
+- Ataque
+- Defesa
+- Ouro
+
+O jogo possui um menu principal com opções para:
+
+- Visualizar os atributos do personagem
+- Explorar
+- Acessar a loja
+- Descansar
+- Sair
+
+A exploração utiliza `Random` para gerar eventos aleatórios.
+
+Eventos implementados atualmente:
+
+- Encontrar ouro
+- Cair em uma armadilha e perder HP
+- Não encontrar nada
+
+Também existe verificação de morte quando o HP chega a zero.
+
+### Planejado
+
+O projeto ainda está em desenvolvimento. Algumas ideias para as próximas versões incluem:
+
+- Sistema de combate
+- Criaturas e inimigos
+- Classes e objetos para representar criaturas
+- Loja funcional
+- Sistema de descanso
+- Inventário
+- Experiência e níveis
+
+---
+
+# Exercícios
 
 ## Exercício 1 - Cálculo de desconto
 
@@ -51,7 +152,7 @@ O programa recebe:
 - Clientes participantes do programa de fidelidade recebem mais 5% de desconto.
 - Valores negativos são considerados inválidos.
 
-O programa exibe o valor original da compra, o desconto aplicado e o valor final.
+Ao final são exibidos o valor original, o desconto aplicado e o valor final da compra.
 
 ---
 
@@ -67,14 +168,10 @@ Programa que recebe uma temperatura em graus Celsius e informa sua classificaç�
 - De 26°C até 32°C: Quente
 - Acima de 32°C: Muito quente
 
-### Alertas
+Também existem alertas adicionais para:
 
-Além da classificação normal:
-
-- Temperaturas abaixo de 0°C indicam risco de congelamento.
-- Temperaturas acima de 40°C geram alerta de calor extremo.
-
-A classificação e os alertas são tratados separadamente.
+- Temperaturas abaixo de 0°C
+- Temperaturas acima de 40°C
 
 ---
 
@@ -82,23 +179,21 @@ A classificação e os alertas são tratados separadamente.
 
 Sistema simplificado para analisar a aprovação de um empréstimo.
 
-O programa recebe:
+São considerados:
 
-- Nome do solicitante
+- Nome
 - Idade
 - Salário mensal
 - Valor da parcela
 - Existência de restrição financeira
 
-### Regras para aprovação
+O empréstimo é aprovado somente quando:
 
-O empréstimo será aprovado somente quando:
+- O solicitante possui 18 anos ou mais
+- Não possui restrição financeira
+- A parcela não ultrapassa 30% do salário
 
-- O solicitante possuir 18 anos ou mais.
-- Não possuir restrição financeira.
-- A parcela não ultrapassar 30% do salário.
-
-Caso seja recusado, o programa informa o principal motivo da recusa.
+Caso seja recusado, o programa informa o principal motivo.
 
 ---
 
@@ -115,50 +210,45 @@ São considerados:
 - Curso técnico
 - Disponibilidade de horário
 
-### Possíveis resultados
-
-O candidato pode ser classificado como:
+O candidato pode receber uma das classificações:
 
 - Aprovado
 - Banco de talentos
 - Reprovado
 
-Para a aprovação são avaliados idade, nota, disponibilidade e experiência ou formação técnica.
-
-O programa também valida dados como nota, idade e tempo de experiência.
+O exercício também trabalha com validação de dados e condições combinadas.
 
 ---
 
 ## Exercício 5 - Tarifa de viagem
 
-Programa que calcula o preço final de uma viagem com base nas características do passageiro e da viagem.
+Programa que calcula o preço final de uma viagem.
 
-### Valor base
+O valor base é calculado através da distância:
 
 ```text
 Valor base = distância × R$ 0,80
 ```
 
+Depois podem ser aplicados acréscimos ou descontos de acordo com:
+
+- Horário de pico
+- Idade do passageiro
+- Cartão de desconto
+
 ### Regras
 
-- Horário de pico acrescenta 20%.
-- Cartão de desconto reduz 10%.
-- Crianças menores de 6 anos não pagam.
-- Passageiros entre 6 e 17 anos recebem 50% de desconto.
-- Pessoas com 60 anos ou mais recebem 40% de desconto.
-
-Os cálculos são realizados seguindo a ordem definida pela atividade:
-
-1. Valor base.
-2. Acréscimo do horário de pico.
-3. Desconto por idade.
-4. Desconto do cartão.
+- Horário de pico: +20%
+- Cartão de desconto: -10%
+- Crianças menores de 6 anos: gratuito
+- Passageiros entre 6 e 17 anos: -50%
+- Pessoas com 60 anos ou mais: -40%
 
 ---
 
 ## Exercício 6 - Triagem de atendimento médico
 
-Sistema simplificado de triagem que classifica o nível de prioridade de atendimento de um paciente.
+Sistema simplificado de triagem que classifica a prioridade de atendimento de um paciente.
 
 O programa recebe:
 
@@ -169,36 +259,43 @@ O programa recebe:
 - Dificuldade para respirar
 - Estado de consciência
 
-### Classificações possíveis
+As classificações possíveis são:
 
 - Emergência
 - Urgente
 - Prioritário
 - Atendimento comum
 
-As condições são verificadas da maior para a menor gravidade, garantindo que situações mais críticas tenham prioridade.
-
-Também são realizadas validações de idade, nível de dor e temperatura antes da classificação.
+As condições são analisadas da maior para a menor prioridade.
 
 ---
 
-## Objetivo
+## Executando os projetos
 
-O objetivo da atividade é desenvolver a lógica de programação utilizando os fundamentos de C#, trabalhando principalmente com:
+É necessário possuir o **.NET SDK** instalado.
 
-- Validação de dados
-- Tomada de decisões
-- Condições compostas
-- Operadores lógicos
-- Organização de regras de negócio
-- Estruturas condicionais
+Entre na pasta do projeto desejado:
 
-## Execução
+```powershell
+cd RpgMenu
+```
 
-Para executar um dos projetos:
+E execute:
 
 ```powershell
 dotnet run
 ```
 
-Cada exercício está armazenado em um projeto Console separado.
+Também é possível executar diretamente um projeto específico:
+
+```powershell
+dotnet run --project .\RpgMenu\FundamentosCSharp.csproj
+```
+
+---
+
+## Objetivo
+
+Este repositório serve como registro da minha evolução em **C# e desenvolvimento back-end**, reunindo exercícios das aulas e pequenos projetos desenvolvidos para aplicar os conteúdos na prática.
+
+Novos projetos e conceitos serão adicionados conforme o avanço dos estudos.

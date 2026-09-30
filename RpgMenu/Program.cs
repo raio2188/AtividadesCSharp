@@ -19,7 +19,7 @@ void status(string Nome, int HP, int MP, int Ataque, int Defesa, int Ouro)
 
 void explorar()
 {
-    int evento = sorteador.Next(1, 4);
+    int evento = sorteador.Next(1, 5);
     int tesouro = sorteador.Next(1, 11);
     int dano = sorteador.Next(1, 6);
 
@@ -37,6 +37,10 @@ void explorar()
     else if (evento == 3)
     {
         Console.WriteLine("Você não encontra nada em sua jornada");
+    } 
+    else if (evento == 4)
+    {
+        Console.WriteLine("Um goblin apareceu!");
     }
     else
     {
