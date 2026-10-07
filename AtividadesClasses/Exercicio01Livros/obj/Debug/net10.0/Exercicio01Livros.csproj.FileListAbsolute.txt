@@ -1,0 +1,15 @@
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\bin\Debug\net10.0\Exercicio01Livros.exe
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\bin\Debug\net10.0\Exercicio01Livros.deps.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\bin\Debug\net10.0\Exercicio01Livros.runtimeconfig.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\bin\Debug\net10.0\Exercicio01Livros.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\bin\Debug\net10.0\Exercicio01Livros.pdb
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.AssemblyInfoInputs.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.AssemblyInfo.cs
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.csproj.CoreCompileInputs.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.sourcelink.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\refint\Exercicio01Livros.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.pdb
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\Exercicio01Livros.genruntimeconfig.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio01Livros\obj\Debug\net10.0\ref\Exercicio01Livros.dll

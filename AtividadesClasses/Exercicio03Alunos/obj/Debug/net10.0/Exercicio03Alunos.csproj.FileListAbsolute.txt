@@ -1,0 +1,15 @@
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\bin\Debug\net10.0\Exercicio03Alunos.exe
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\bin\Debug\net10.0\Exercicio03Alunos.deps.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\bin\Debug\net10.0\Exercicio03Alunos.runtimeconfig.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\bin\Debug\net10.0\Exercicio03Alunos.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\bin\Debug\net10.0\Exercicio03Alunos.pdb
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.AssemblyInfoInputs.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.AssemblyInfo.cs
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.csproj.CoreCompileInputs.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.sourcelink.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\refint\Exercicio03Alunos.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.pdb
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\Exercicio03Alunos.genruntimeconfig.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio03Alunos\obj\Debug\net10.0\ref\Exercicio03Alunos.dll

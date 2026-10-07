@@ -1,0 +1,15 @@
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\bin\Debug\net10.0\Exercicio04Contas.exe
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\bin\Debug\net10.0\Exercicio04Contas.deps.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\bin\Debug\net10.0\Exercicio04Contas.runtimeconfig.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\bin\Debug\net10.0\Exercicio04Contas.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\bin\Debug\net10.0\Exercicio04Contas.pdb
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.AssemblyInfoInputs.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.AssemblyInfo.cs
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.csproj.CoreCompileInputs.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.sourcelink.json
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\refint\Exercicio04Contas.dll
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.pdb
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\Exercicio04Contas.genruntimeconfig.cache
+C:\Users\42144763879\Desktop\backEnd\AtividadesClasses\Exercicio04Contas\obj\Debug\net10.0\ref\Exercicio04Contas.dll
