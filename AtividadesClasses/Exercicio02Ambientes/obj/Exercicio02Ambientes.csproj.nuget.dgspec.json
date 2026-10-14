@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj": {}
+    "C:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj": {}
   },
   "projects": {
-    "c:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj": {
+    "C:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj",
+        "projectUniqueName": "C:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj",
         "projectName": "Exercicio02Ambientes",
-        "projectPath": "c:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj",
+        "projectPath": "C:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\Exercicio02Ambientes.csproj",
         "packagesPath": "C:\\Users\\42144763879\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\obj\\",
+        "outputPath": "C:\\Users\\42144763879\\Desktop\\backEnd\\AtividadesClasses\\Exercicio02Ambientes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
