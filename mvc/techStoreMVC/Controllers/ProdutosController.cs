@@ -3,7 +3,7 @@ using techStoreMVC.Models;
 
 namespace techStoreMVC.Controllers
 {
-    public class ProdutoController : Controller // o ":" significa herança
+    public class ProdutosController : Controller // o ":" significa herança
     // Herança = herdas as características de um Controller.
     // Conceito de PPO -> Programação Orientada a Objetos
     {
@@ -14,12 +14,12 @@ namespace techStoreMVC.Controllers
         public ActionResult Index()
         {
             //Criar um objeto com vários produtos, por isso usamos um List
-            List<Produto> produtos = new List<Produto>
+            List<Produtos> produtos = new List<Produtos>
             {
-                new Produto(1, "Mouse Gamer", 129.90, 10),
-                new Produto(1, "Teclado Mecânico", 249.90, 5),
-                new Produto(1, "Monitor 24 polegadas", 899.90, 8),
-                new Produto(1, "Headset Gamer", 179.90, 15)
+                new Produtos(1, "Mouse Gamer", 129.90, 10),
+                new Produtos(2, "Teclado Mecânico", 249.90, 5),
+                new Produtos(3, "Monitor 24 polegadas", 899.90, 8),
+                new Produtos(4, "Headset Gamer", 179.90, 15)
             };
             return View(produtos);
         }

@@ -1,7 +1,7 @@
 namespace techStoreMVC.Models;
 
 // Atributos
-public class Produto
+public class Produtos
 {
     public int Id {get; set;}
     public string Nome {get; set;}
@@ -10,7 +10,7 @@ public class Produto
 
     // Método Construtor - Define valores iniciais desses atributos acima!!!!!!!!!!!
 
-    public Produto(
+    public Produtos(
         int id,
         string nome,
         double preco,

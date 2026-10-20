@@ -1,0 +1,51 @@
+@model List<techStoreMVC.Models.Categorias>
+
+
+@{
+    ViewData[index: "Title"] = "Categorias";
+}
+<h1>
+    Lista de Categorias
+</h1>
+
+<p>Total de categorias: @Model.Count</p>
+
+<table class="table table-striped"> 
+    @* Tipo da tabela acima com Bootstrap *@
+    <thead>
+        @* Cabeçalho da tabela *@
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+     @* Imagine que a cada nova categoria você tivesse que repetir isso
+        toda a vez, seriam linhas sem fim. Por isso, usamos o foreach.
+        
+        O Foreach repete enquanto houver produtos existentes e ,se 
+        existir, eles serão exibidos para ti nessa tela. *@
+    <tbody>
+    @foreach (var categorias in Model)
+    {
+        <tr>
+            <td>@categorias.Id</td>
+            <td>@categorias.Nome</td>
+            <td>@categorias.Descricao</td>
+            @if (categorias.Ativa)
+            {
+                <td class="text-success">Ativa</td>
+            }
+            else
+            {
+                <td class="text-danger fw-bold">Inativa</td>
+            }
+            <td>
+                <button class="btn btn-primary">Detalhes</button>
+            </td>
+        </tr>
+    }
+</tbody>
+</table>

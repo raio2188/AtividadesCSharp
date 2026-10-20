@@ -1,10 +1,10 @@
 @* Passo 03 - Criar as Views *@
 @* Se Estou na View(Index) de Produtos, qual será a model
 que devo usar???????? *@
-@model List<techStoreMVC.Models.Produto>
+@model List<techStoreMVC.Models.Produtos>
 
 @{
-    ViewData[index: "Title"] = "Produto";
+    ViewData[index: "Title"] = "Produtos";
 }
 <h1>
     Lista de Produtos
@@ -27,13 +27,13 @@ que devo usar???????? *@
         O Foreach repete enquanto houver produtos existentes e ,se 
         existir, eles serão exibidos para ti nessa tela. *@
     <tbody>
-    @foreach (var produto in Model)
+    @foreach (var produtos in Model)
     {
         <tr>
-            <td>@produto.Id</td>
-            <td>@produto.Nome</td>
-            <td>R$ @produto.Preco.ToString("F2")</td>
-            <td>@produto.Estoque</td>
+            <td>@produtos.Id</td>
+            <td>@produtos.Nome</td>
+            <td>R$ @produtos.Preco.ToString("F2")</td>
+            <td>@produtos.Estoque</td>
             <td>
                 <button class="btn btn-primary">Detalhes</button>
             </td>

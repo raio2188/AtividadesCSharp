@@ -1,0 +1,39 @@
+
+@model List<techStoreMVC.Models.Categorias>
+
+@{
+    ViewData["Title"] = "Categorias Ativas";
+}
+
+<h1>Categorias Ativas</h1>
+
+<p>Total de categorias ativas: @Model.Count</p>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th>Situação</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var categoria in Model)
+        {
+            <tr>
+                <td>@categoria.Id</td>
+                <td>@categoria.Nome</td>
+                <td>@categoria.Descricao</td>
+                <td class="text-success">Ativa</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Categorias"
+   asp-action="Index"
+   class="btn btn-secondary">
+    Voltar para categorias
+</a>
