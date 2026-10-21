@@ -1,15 +1,16 @@
 @* Passo 03 - Criar as Views *@
 @* Se Estou na View(Index) de Produtos, qual será a model
 que devo usar???????? *@
-@model List<techStoreMVC.Models.Produtos>
+@Model List<TechStoreMVC.Models.Produto>
 
 @{
-    ViewData[index: "Title"] = "Produtos";
+    ViewData["Title"] = "Produtos";
 }
+
 <h1>
     Lista de Produtos
 </h1>
-<table class="table table-striped"> 
+<table class="table table-striped">
     @* Tipo da tabela acima com Bootstrap *@
     <thead>
         @* Cabeçalho da tabela *@
@@ -21,23 +22,25 @@ que devo usar???????? *@
             <th>Ações</th>
         </tr>
     </thead>
-     @* Imagine que a cada novo produto você tivesse que repetir isso
+    @* Imagine que a cada novo produto você tivesse que repetir isso
         toda a vez, seriam linhas sem fim. Por isso, usamos o foreach.
         
         O Foreach repete enquanto houver produtos existentes e ,se 
         existir, eles serão exibidos para ti nessa tela. *@
     <tbody>
-    @foreach (var produtos in Model)
-    {
-        <tr>
-            <td>@produtos.Id</td>
-            <td>@produtos.Nome</td>
-            <td>R$ @produtos.Preco.ToString("F2")</td>
-            <td>@produtos.Estoque</td>
-            <td>
-                <button class="btn btn-primary">Detalhes</button>
-            </td>
-        </tr>
-    }
-</tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>@produto.Nome</td>
+                <td>R$ @produto.Preco.ToString("F2")</td>
+                <td>@produto.Estoque</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@produto.Id" class="btn btn-primary">
+                        Detalhes 
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
 </table>
