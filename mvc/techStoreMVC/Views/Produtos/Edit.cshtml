@@ -1,4 +1,4 @@
-@model techStoreMVC.Models.Produtos
+@model techStoreMVC.Models.Produto
 
 @{
     ViewData["Title"] = "Editar produto";
@@ -9,43 +9,31 @@
 <form asp-action="Edit" method="post">
     <input asp-for="Id" type="hidden" />
 
-    <div asp-validation-summary="ModelOnly"
-         class="text-danger"></div>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
     <div class="mb-3">
-        <label asp-for="Nome"
-               class="form-label"></label>
-        <input asp-for="Nome"
-               class="form-control" />
-        <span asp-validation-for="Nome"
-              class="text-danger"></span>
+        <label asp-for="Nome" class="form-label"></label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="Preco"
-               class="form-label"></label>
-        <input asp-for="Preco"
-               class="form-control" />
-        <span asp-validation-for="Preco"
-              class="text-danger"></span>
+        <label asp-for="Preco" class="form-label"></label>
+        <input asp-for="Preco" type="number" step="any" class="form-control" />
+        <span asp-validation-for="Preco" class="text-danger"></span>
     </div>
 
     <div class="mb-3">
-        <label asp-for="Estoque"
-               class="form-label"></label>
-        <input asp-for="Estoque"
-               class="form-control" />
-        <span asp-validation-for="Estoque"
-              class="text-danger"></span>
+        <label asp-for="Estoque" class="form-label"></label>
+        <input asp-for="Estoque" class="form-control" />
+        <span asp-validation-for="Estoque" class="text-danger"></span>
     </div>
 
-    <button type="submit"
-            class="btn btn-warning">
+    <button type="submit" class="btn btn-warning">
         Salvar alterações
     </button>
 
-    <a asp-action="Index"
-       class="btn btn-secondary">
+    <a asp-action="Index" class="btn btn-secondary">
         Cancelar
     </a>
 </form>

@@ -1,29 +1,19 @@
-using System.ComponentModel.DataAnnotations;
-
 namespace techStoreMVC.Models;
 
-// Atributos
-public class Produtos
+public class Produto
 {
-    [Required(ErrorMessage = "Informe um nome")]
-    [StringLength(
-        100,
-        MinimumLength = 3,
-        ErrorMessage = "O nome deve possuir entre 3 e 100 caracteres."
-    )]
-    public int Id {get; set;}
-    public string Nome {get; set;}
-    public double Preco {get; set;}
-    public int Estoque {get; set;}
+    public int Id { get; set; }
+    public string Nome { get; set; } = string.Empty;
+    public double Preco { get; set; }
+    public int Estoque { get; set; }
 
-    // Método Construtor - Define valores iniciais desses atributos acima!!!!!!!!!!!
+    // O MVC usa este construtor para receber o formulário.
+    // Tivemos de alterar o construtor para que tratassemos o erro ao editar
+    public Produto()
+    {
+    }
 
-    public Produtos(
-        int id,
-        string nome,
-        double preco,
-        int estoque
-    )
+    public Produto(int id, string nome, double preco, int estoque)
     {
         Id = id;
         Nome = nome;

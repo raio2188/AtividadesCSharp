@@ -1,32 +1,119 @@
-
 using Microsoft.AspNetCore.Mvc;
 using techStoreMVC.Models;
 
 namespace techStoreMVC.Controllers
 {
-    public class CategoriasController : Controller
+    public class CategoriasController : Controller // o ":" significa herança
+    // Herança = herda as caracteristicas de um Controller. :)
+    // Conceito de POO -> Programação Orientada a Objetos
     {
-        private static readonly List<Categorias> categorias = new()
+        private readonly CategoriaDB _categoriaDB;
+        public CategoriasController()
         {
-            new Categorias(1, "Informática", "Computadores e componentes", true),
-            new Categorias(2, "Periféricos", "Mouse, teclado e acessórios", true),
-            new Categorias(3, "Áudio", "Fones, caixas e microfones", true),
-            new Categorias(4, "Monitores", "Telas e monitores", true),
-            new Categorias(5, "Descontinuados", "Categorias fora de uso", false)
-        };
-
-        public IActionResult Index()
+            _categoriaDB = new CategoriaDB();
+        }
+        // Passo 02 - Criar a ação 
+        // Uma view Depende de uma ação e vice-versa
+        [HttpGet] // Verbo Http -> para ter os Categoria
+        public ActionResult Index()
         {
-            return View(categorias);
+            List<Categoria> Categoria = _categoriaDB.Listar();
+            return View(Categoria);
         }
 
-        public IActionResult ativas()
+        [HttpGet]
+        public IActionResult Details(int id)
         {
-            var categoriasAtivas = categorias
-                .Where(categoria => categoria.Ativa)
+            Categoria? categoria = _categoriaDB.buscarPorId(id);
+            if (categoria is null)
+                return NotFound();
+
+            return View(categoria);
+        }
+
+        [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Create(Categoria categoria)
+        {
+            if (!ModelState.IsValid)
+                return View(categoria);
+
+            _categoriaDB.Adicionar(categoria);
+            TempData["Sucesso"] =
+                "Categoria cadastrada com sucesso!";
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult Edit(int id)
+        {
+            Categoria? categoria = _categoriaDB.buscarPorId(id);
+            if (categoria is null)
+                return NotFound();
+            return View(categoria);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(Categoria categoria, int id)
+        {
+            if (id != categoria.Id)
+                return BadRequest();
+
+            if (!ModelState.IsValid)
+                return View(categoria);
+
+            bool atualizou = _categoriaDB.Atualizar(categoria);
+            if (!atualizou)
+                return NotFound();
+
+            TempData["Sucesso"] =
+                "Categoria atualizada com sucesso!";
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int id)
+        {
+            Categoria? categoria = _categoriaDB.buscarPorId(id);
+            if (categoria is null)
+                return NotFound();
+            return View(categoria);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            bool excluiu = _categoriaDB.Excluir(id);
+
+            if (!excluiu)
+                return NotFound();
+
+            TempData["Sucesso"] =
+                "Categoria excluída com sucesso!";
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpGet]
+        public IActionResult Ativas()
+        {
+            List<Categoria> categoriasAtivas = _categoriaDB
+                .Listar()
+                .Where(c => c.Ativa)
                 .ToList();
 
             return View(categoriasAtivas);
         }
-    }   
+    }
+
 }
