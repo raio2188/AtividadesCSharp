@@ -1,0 +1,17 @@
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+
+<div class="controles-conta">
+@if (SignInManager.IsSignedIn(User))
+{
+    <a class="nav-link" asp-area="Identity" asp-page="/Account/Manage/Index" title="Gerenciar conta">@User.Identity?.Name</a>
+    <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+        <button type="submit" class="btn">Sair</button>
+    </form>
+}
+else
+{
+    <a class="nav-link" asp-area="" asp-controller="Conta" asp-action="Login">Entrar</a>
+    <a class="btn btn-primary" asp-area="" asp-controller="Conta" asp-action="Cadastro">Criar conta</a>
+}
+</div>

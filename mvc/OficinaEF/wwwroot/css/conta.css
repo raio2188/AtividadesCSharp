@@ -1,0 +1,54 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); color: var(--texto); font: 15px/1.45 var(--fonte); }
+.conta { display: grid; grid-template-columns: 1fr 1fr; min-height: 100svh; padding: 13px 16px 15px; }
+.paisagem { position: relative; overflow: hidden; min-height: 590px; border-radius: 10px; background: #21192e url("../images/dunas.jpg") center / cover; }
+.paisagem header { position: absolute; inset: 20px 22px auto 25px; display: flex; align-items: center; justify-content: space-between; }
+.marca { width: 90px; height: 25px; }
+a { color: var(--link); text-underline-offset: 2px; }
+.voltar { display: flex; align-items: center; gap: 9px; padding: 5px 13px; background: #ffffff29; border-radius: 30px; color: white; text-decoration: none; font-size: 14px; }
+.legenda { position: absolute; bottom: 11%; width: 100%; text-align: center; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.18; letter-spacing: -.035em; }
+.marcas { position: absolute; bottom: 4.8%; width: 100%; display: flex; justify-content: center; gap: 9px; }
+.marcas i { width: 30px; height: 4px; background: #ffffff40; border-radius: 4px; }
+.marcas i:last-child { width: 41px; background: white; }
+.painel { display: grid; place-items: center; padding: 44px 24px; }
+.conteudo { width: min(100%, 395px); }
+h1 { margin: 0; font-size: clamp(37px, 4.1vw, 52px); line-height: 1.12; font-weight: 500; letter-spacing: -.045em; }
+.intro { margin: 19px 0 44px; color: #bcb6c7; }
+form { display: grid; gap: 17px; }
+input, button { font: inherit; }
+input:not([type=checkbox], [type=hidden]) { display: block; width: 100%; height: var(--controle); padding: 0 17px; border: 1px solid transparent; border-radius: var(--raio); background: var(--campo); color: white; }
+input::placeholder { color: #b4acbf; }
+:focus-visible { outline: 2px solid var(--foco); outline-offset: 2px; }
+input:not([type=checkbox]):focus { border-color: #aa96d4; outline: none; }
+.segredo { position: relative; }
+.segredo input:not([type=checkbox]) { padding-right: 42px; }
+.olho { display: grid; place-items: center; position: absolute; right: 2px; top: 0; height: 100%; width: 40px; background: transparent; border: 0; color: #afa6bf; cursor: pointer; }
+.olho svg { width: 21px; fill: none; stroke: currentColor; stroke-width: 1.5; }
+[hidden], .risco, .validation-summary-valid { display: none; }
+.olho[aria-pressed=true] .risco { display: block; }
+.dupla, .atalhos { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+small, .opcoes { font-size: 13px; color: var(--secundario); }
+.opcoes, .opcoes label { display: flex; gap: 8px; align-items: center; }
+.opcoes { justify-content: space-between; flex-wrap: wrap; }
+input[type=checkbox] { width: 19px; height: 19px; margin: 0; accent-color: #af98e7; }
+.principal, .atalhos a { border-radius: var(--raio); min-height: var(--controle); color: white; }
+.principal { margin-top: 13px; border: 0; background: var(--acao); font-weight: 500; cursor: pointer; }
+.principal:hover { background: var(--acao-hover); }
+.divisor { display: flex; gap: 15px; align-items: center; margin: 19px 0 16px; color: #b5adbf; font-size: 12px; }
+.divisor::before, .divisor::after { content: ""; height: 1px; background: var(--linha); flex: 1; }
+.atalhos a { border: 1px solid #81788d; display: grid; place-items: center; text-decoration: none; font-size: 14px; }
+.atalhos a:hover, .voltar:hover { background-color: #ffffff18; }
+.field-validation-error, .validation-summary-errors { color: var(--erro); font-size: 13px; }
+.validation-summary-errors ul { margin: 0; padding-left: 20px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+@media (max-width: 760px) {
+    .conta { grid-template-columns: 1fr; padding: 10px; }
+    .paisagem { min-height: 205px; background-position: center 44%; }
+    .paisagem header { inset: 14px 16px auto; }
+    .marca { width: 68px; }
+    .legenda { font-size: 22px; bottom: 15%; }
+    .marcas { bottom: 6%; }
+    .painel { padding: 32px 12px; }
+    .intro { margin: 12px 0 26px; }
+}
+@media (max-width: 440px) { .dupla { grid-template-columns: 1fr; } }

@@ -1,0 +1,12 @@
+@model ErrorViewModel
+@{ ViewData["Title"] = "Erro"; }
+<p class="rotulo">OficinaEF</p>
+<h1>Falha ao processar a solicitação</h1>
+@if (Model.ShowRequestId)
+{
+    <p>Identificador da solicitação: <code>@Model.RequestId</code></p>
+}
+<h2>Diagnóstico em desenvolvimento</h2>
+<p>Para ver os detalhes do erro durante a depuração local, defina a variável <code>ASPNETCORE_ENVIRONMENT</code> como <code>Development</code> e reinicie a aplicação.</p>
+<p class="alert alert-warning">Ative esse modo apenas no ambiente local. Em produção, os detalhes de exceções podem expor informações sensíveis.</p>
+<a asp-controller="Home" asp-action="Index">Voltar ao início</a>

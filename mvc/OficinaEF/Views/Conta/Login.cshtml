@@ -1,0 +1,17 @@
+@model LoginViewModel
+@{ ViewData["Title"] = "Login"; }
+<h1 id="titulo">Entrar na conta</h1>
+<p class="intro">Ainda não tem uma conta? <a asp-action="Cadastro" asp-route-returnUrl="@Model.ReturnUrl">Cadastre-se</a></p>
+<form asp-action="Login" method="post">
+    <input asp-for="ReturnUrl" type="hidden" />
+    <div asp-validation-summary="ModelOnly" role="alert"></div>
+    <div><label class="sr" asp-for="Email">E-mail</label>
+        <input asp-for="Email" autocomplete="username" placeholder="E-mail" required aria-describedby="email-erro" />
+        <span asp-validation-for="Email" id="email-erro"></span></div>
+    <div><label class="sr" asp-for="Senha">Senha</label>
+        <div class="segredo"><input asp-for="Senha" autocomplete="current-password" placeholder="Senha" required aria-describedby="senha-erro" /><partial name="_AlternarSenha" /></div>
+        <span asp-validation-for="Senha" id="senha-erro"></span></div>
+    <div class="opcoes"><label><input asp-for="Lembrar" /> Lembrar de mim</label>
+        <a asp-area="Identity" asp-page="/Account/ForgotPassword">Esqueci minha senha</a></div>
+    <button class="principal">Entrar</button>
+</form>

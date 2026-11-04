@@ -1,0 +1,31 @@
+@{
+    var areaIdentity = ViewContext.RouteData.Values["area"]?.ToString() == "Identity";
+    var inicio = ViewContext.RouteData.Values["controller"]?.ToString() == "Home"
+        && ViewContext.RouteData.Values["action"]?.ToString() == "Index";
+    var ampla = inicio || ViewData["LayoutAmplo"] is true;
+}
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] · OficinaEF</title>
+    <link rel="stylesheet" href="~/css/tema.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+    <header class="topo"><nav class="barra" aria-label="Principal">
+        <a class="identidade" asp-area="" asp-controller="Home" asp-action="Index">Oficina<span>EF</span></a>
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" aria-current="@(inicio ? "page" : null)">Início</a>
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" aria-current="@(ViewContext.RouteData.Values["action"]?.ToString() == "Privacy" ? "page" : null)">Privacidade</a>
+        <partial name="_LoginPartial" />
+    </nav></header>
+    <main tabindex="-1" id="conteudo" lang="@(areaIdentity ? "en" : "pt-BR")" class="@(ampla ? "ampla" : "leitura")">@RenderBody()</main>
+    <footer><div class="barra"><span>© @DateTime.Now.Year OficinaEF</span>
+        <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacidade</a></div></footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true" defer></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

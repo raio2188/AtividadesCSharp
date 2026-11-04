@@ -1,0 +1,9 @@
+@model string
+@if (!string.IsNullOrEmpty(Model))
+{
+    var tipo = Model.StartsWith("Error") ? "danger" : "success";
+    <div class="alert alert-@tipo" role="alert">
+        @Model
+        <button type="button" class="fechar" aria-label="Dismiss message" hidden>×</button>
+    </div>
+}

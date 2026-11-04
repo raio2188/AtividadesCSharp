@@ -1,0 +1,24 @@
+@model CadastroViewModel
+@{ ViewData["Title"] = "Cadastro"; }
+<h1 id="titulo">Criar uma conta</h1>
+<p class="intro">Já tem uma conta? <a asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">Entrar</a></p>
+<form asp-action="Cadastro" method="post">
+    <input asp-for="ReturnUrl" type="hidden" />
+    <div asp-validation-summary="ModelOnly" role="alert"></div>
+    <div><label class="sr" asp-for="Nome">Nome completo</label>
+        <input asp-for="Nome" autocomplete="name" placeholder="Nome completo" required aria-describedby="nome-erro" />
+        <span asp-validation-for="Nome" id="nome-erro"></span></div>
+    <div><label class="sr" asp-for="Email">E-mail</label>
+        <input asp-for="Email" autocomplete="email" placeholder="E-mail" required aria-describedby="email-erro" />
+        <span asp-validation-for="Email" id="email-erro"></span></div>
+    <div class="dupla">
+        <div><label class="sr" asp-for="Senha">Senha</label>
+            <div class="segredo"><input asp-for="Senha" autocomplete="new-password" placeholder="Senha" minlength="6" required aria-describedby="dica senha-erro" /><partial name="_AlternarSenha" /></div>
+            <span asp-validation-for="Senha" id="senha-erro"></span></div>
+        <div><label class="sr" asp-for="Confirmacao">Confirmar senha</label>
+            <div class="segredo"><input asp-for="Confirmacao" autocomplete="new-password" placeholder="Confirmar senha" required aria-describedby="confirmacao-erro" /><partial name="_AlternarSenha" /></div>
+            <span asp-validation-for="Confirmacao" id="confirmacao-erro"></span></div>
+    </div>
+    <small id="dica">Use de 6 a 100 caracteres, com maiúscula, minúscula, número e símbolo.</small>
+    <button class="principal">Criar conta</button>
+</form>

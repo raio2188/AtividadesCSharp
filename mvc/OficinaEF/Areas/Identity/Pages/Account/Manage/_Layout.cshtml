@@ -1,0 +1,15 @@
+@{
+    Layout = ViewData["ParentLayout"]?.ToString() ?? "/Views/Shared/_Layout.cshtml";
+    ViewData["LayoutAmplo"] = true;
+}
+<header class="cabecalho-conta">
+    <p class="rotulo">Account settings</p>
+    <h1>Manage your account</h1>
+</header>
+<div class="configuracoes">
+    <nav aria-label="Account settings"><partial name="_ManageNav" /></nav>
+    <section class="ajustes" aria-label="@ViewData["Title"]">@RenderBody()</section>
+</div>
+@section Scripts {
+    @await RenderSectionAsync("Scripts", required: false)
+}

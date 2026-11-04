@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] · OficinaEF</title>
+    <link rel="stylesheet" href="~/css/tema.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/conta.css" asp-append-version="true" />
+    <script src="~/js/conta.js" asp-append-version="true" defer></script>
+</head>
+<body>
+    <main class="conta">
+        <aside class="paisagem" aria-label="Dunas ao entardecer">
+            <header>
+                <svg class="marca" viewBox="0 0 90 24" role="img" aria-label="AMU">
+                    <path d="M2 21v-6L14 3h11v18M32 21V3l13 12L59 3v18M65 3v17h22V3" fill="none" stroke="currentColor" stroke-width="3.7" />
+                </svg>
+                <a class="voltar" asp-controller="Home" asp-action="Index">Voltar ao site <span aria-hidden="true">→</span></a>
+            </header>
+            <div class="legenda">Capturando momentos,<br />criando memórias.</div>
+            <div class="marcas" aria-hidden="true"><i></i><i></i><i></i></div>
+        </aside>
+        <section class="painel" aria-labelledby="titulo"><div class="conteudo">@RenderBody()
+            <p class="divisor">Outras opções</p>
+            <nav class="atalhos" aria-label="Outras opções">
+                <a asp-controller="Home" asp-action="Index">Página inicial</a>
+                <a asp-area="Identity" asp-page="/Account/ResendEmailConfirmation">Reenviar confirmação</a>
+            </nav>
+        </div></section>
+    </main>
+</body>
+</html>

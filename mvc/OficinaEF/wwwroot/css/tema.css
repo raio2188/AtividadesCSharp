@@ -1,0 +1,19 @@
+:root {
+    --fundo: #2b2637;
+    --superficie: #322c40;
+    --campo: #3c364b;
+    --texto: #faf9fc;
+    --secundario: #c6bfd0;
+    --link: #d1c3f2;
+    --acao: #7056b5;
+    --acao-hover: #8064c5;
+    --foco: #c5aef5;
+    --linha: #585063;
+    --erro: #ffbfca;
+    --fonte: "Segoe UI", Arial, sans-serif;
+    --raio: 6px;
+    --raio-painel: 10px;
+    --controle: 46px;
+    --espaco: 16px;
+    --margem: clamp(18px, 5vw, 64px);
+}
