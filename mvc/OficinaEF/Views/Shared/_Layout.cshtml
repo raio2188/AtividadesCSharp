@@ -19,6 +19,9 @@
         <a class="identidade" asp-area="" asp-controller="Home" asp-action="Index">Oficina<span>EF</span></a>
         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index" aria-current="@(inicio ? "page" : null)">Início</a>
         <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy" aria-current="@(ViewContext.RouteData.Values["action"]?.ToString() == "Privacy" ? "page" : null)">Privacidade</a>
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Admin" aria-current="@(ViewContext.RouteData.Values["action"]?.ToString() == "Admin" ? "page" : null)">Admin</a>
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Atendente" aria-current="@(ViewContext.RouteData.Values["action"]?.ToString() == "Atendente" ? "page" : null)">Atendente</a>
+        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Cliente" aria-current="@(ViewContext.RouteData.Values["action"]?.ToString() == "Cliente" ? "page" : null)">Cliente</a>
         <partial name="_LoginPartial" />
     </nav></header>
     <main tabindex="-1" id="conteudo" lang="@(areaIdentity ? "en" : "pt-BR")" class="@(ampla ? "ampla" : "leitura")">@RenderBody()</main>

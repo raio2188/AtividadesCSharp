@@ -1,11 +1,7 @@
 using System.Security.Claims;
-using System.Text;
-using System.Text.Encodings.Web;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.WebUtilities;
 using OficinaEF.Data;
 using OficinaEF.Models;
 
@@ -13,7 +9,7 @@ namespace OficinaEF.Controllers;
 
 [AutoValidateAntiforgeryToken]
 public class ContaController(SignInManager<IdentityUser> signIn, UserManager<IdentityUser> users,
-    ApplicationDbContext db, IEmailSender mail) : Controller
+    ApplicationDbContext db) : Controller
 {
     private string Destino(string? url) => Url.IsLocalUrl(url) ? url! : Url.Content("~/");
 
@@ -37,7 +33,7 @@ public class ContaController(SignInManager<IdentityUser> signIn, UserManager<Ide
             return RedirectToPage("/Account/LoginWith2fa", new { area = "Identity", returnUrl, rememberMe = model.Lembrar });
         if (result.IsLockedOut) return RedirectToPage("/Account/Lockout", new { area = "Identity" });
 
-        ModelState.AddModelError("", "Não foi possível entrar. Confira o e-mail, a senha e a confirmação da conta.");
+        ModelState.AddModelError("", "Não foi possível entrar. Confira o e-mail e a senha.");
         return View(model);
     }
 
@@ -49,7 +45,7 @@ public class ContaController(SignInManager<IdentityUser> signIn, UserManager<Ide
     {
         if (!ModelState.IsValid) return View(model);
 
-        var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+        var user = new IdentityUser { UserName = model.Email, Email = model.Email, EmailConfirmed = true };
         await using (var transaction = await db.Database.BeginTransactionAsync())
         {
             var result = await users.CreateAsync(user, model.Senha);
@@ -65,14 +61,6 @@ public class ContaController(SignInManager<IdentityUser> signIn, UserManager<Ide
         }
 
         var returnUrl = Destino(model.ReturnUrl);
-        var token = await users.GenerateEmailConfirmationTokenAsync(user);
-        var code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(token));
-        var link = Url.Page("/Account/ConfirmEmail", null, new { area = "Identity", userId = user.Id, code, returnUrl }, Request.Scheme)!;
-        await mail.SendEmailAsync(model.Email, "Confirme seu e-mail",
-            $"Para confirmar a conta, <a href=\"{HtmlEncoder.Default.Encode(link)}\">acesse este link</a>.");
-
-        if (users.Options.SignIn.RequireConfirmedAccount)
-            return RedirectToPage("/Account/RegisterConfirmation", new { area = "Identity", email = model.Email, returnUrl });
         await signIn.SignInAsync(user, isPersistent: false);
         return LocalRedirect(returnUrl);
     }

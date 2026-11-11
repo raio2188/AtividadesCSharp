@@ -1,0 +1,23 @@
+@{ ViewData["Title"] = "Início"; }
+<section class="capa">
+    <p class="rotulo">OficinaEF</p>
+    <h1>Tela de atendente</h1>
+    @if (User.Identity?.IsAuthenticated == true)
+    {
+        <p>Acesse seu perfil e gerencie as configurações de segurança da sua conta.</p>
+        <a class="btn btn-primary" asp-area="Identity" asp-page="/Account/Manage/Index">Gerenciar minha conta</a>
+    }
+    else
+    {
+        <p>Entre na sua conta ou faça seu cadastro para acessar seu perfil.</p>
+        <div class="acoes"><a class="btn btn-primary" asp-controller="Conta" asp-action="Login">Entrar na conta</a>
+        <a class="btn secundaria" asp-controller="Conta" asp-action="Cadastro">Criar conta</a></div>
+    }
+</section>
+<section class="recursos" aria-labelledby="recursos">
+    <h2 id="recursos">Informações e recursos</h2>
+    <div class="cartoes">
+        <a class="cartao" asp-action="Privacy"><strong>Privacidade</strong><span>Informações sobre a política do site.</span></a>
+        <a class="cartao" href="https://learn.microsoft.com/aspnet/core"><strong>ASP.NET Core</strong><span>Documentação da plataforma utilizada pela OficinaEF.</span></a>
+    </div>
+</section>
