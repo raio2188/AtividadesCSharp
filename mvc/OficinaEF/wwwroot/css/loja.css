@@ -1,0 +1,42 @@
+.topo { background: var(--fundo-topo); border-bottom: 1px solid var(--linha); }
+.marca { color: var(--texto); font-size: 1.65rem; font-weight: 650; letter-spacing: -.045em; }
+.marca, .link-menu, .menu-admin a { text-decoration: none; }
+.link-menu, .menu-admin a { color: var(--secundario); border-radius: var(--raio); padding: .55rem .75rem; }
+.link-menu:hover, .menu-admin a:hover { background: var(--campo); }
+.link-menu[aria-current], .menu-admin a[aria-current] { background: var(--campo); color: var(--texto); box-shadow: inset 0 -2px var(--foco); }
+.abertura, .capa {
+    padding: clamp(1.5rem, 6vw, 4.5rem);
+    background: linear-gradient(100deg, #21192ef5, #21192ecf 55%, #21192e65), url("../images/dunas.jpg") center 44% / cover;
+    border-radius: var(--raio-painel);
+    border: 1px solid var(--linha);
+}
+.abertura p, .capa p { color: var(--secundario); margin-bottom: 0; }
+.capa .rotulo { margin-bottom: .5rem; }
+.capa .btn { margin-top: 1rem; }
+.rotulo { color: var(--link); font-size: .8rem; font-weight: 650; letter-spacing: .12em; text-transform: uppercase; }
+.recursos { margin-top: 2rem; }
+.cartoes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--espaco); }
+.cartao { display: grid; gap: .35rem; padding: 1.2rem; text-decoration: none; }
+.cartao:hover { border-color: var(--foco); }
+.cartao span { color: var(--secundario); }
+.produto-card { overflow-wrap: anywhere; }
+.foto-produto { width: 100%; height: 230px; object-fit: contain; padding: 1rem; background: var(--fundo-topo); border-radius: var(--raio-painel); }
+.produto-card .foto-produto { border-radius: var(--raio-painel) var(--raio-painel) 0 0; border-bottom: 1px solid var(--linha); }
+.foto-pendente { display: grid; place-items: center; color: var(--secundario); background: var(--campo); }
+.preco { color: var(--link); font-size: 1.5rem; font-weight: 650; }
+.estrutura-admin { display: grid; grid-template-columns: 220px minmax(0, 1fr); min-height: calc(100svh - 76px); }
+.menu-admin { background: var(--fundo-topo); border-inline-end: 1px solid var(--linha); padding: 1.5rem 1rem; }
+.menu-admin a { display: block; margin-bottom: .25rem; }
+.conteudo-admin { padding: clamp(1rem, 3vw, 2rem); min-width: 0; }
+.cabecalho-lista, .acoes { display: flex; align-items: center; flex-wrap: wrap; gap: var(--espaco); }
+.cabecalho-lista { justify-content: space-between; margin-bottom: 1.5rem; }
+.cabecalho-lista h1 { margin: 0; }
+.formulario { max-width: 680px; margin-top: 1.5rem; }
+@media (max-width: 760px) {
+    .estrutura-admin, .cartoes { grid-template-columns: 1fr; }
+    .menu-admin { padding: 1rem; border-inline-end: 0; border-bottom: 1px solid var(--linha); }
+    .menu-admin a { display: inline-block; }
+}
+@media (max-width: 540px) {
+    .topo nav > div { flex-basis: 100%; border-top: 1px solid var(--linha); padding-top: .65rem; overflow-wrap: anywhere; }
+}

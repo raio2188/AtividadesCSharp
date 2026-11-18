@@ -9,6 +9,12 @@
     --acao-hover: #8064c5;
     --foco: #c5aef5;
     --linha: #585063;
+    --contorno: #92869f;
+    --fundo-topo: #262130;
+    --placeholder: #b4acbf;
+    --sucesso: #a6dfc1;
+    --aviso: #f2ce97;
+    --sombra-painel: 0 8px 24px #17122050;
     --erro: #ffbfca;
     --fonte: "Segoe UI", Arial, sans-serif;
     --raio: 6px;
